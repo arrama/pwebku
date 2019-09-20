@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html>
+<title>homepage</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="w3.css">
+<style>
+.w3-theme {color:#fff !important;background-color:#4CAF50 !important}
+.w3-btn {background-color:#4CAF50;margin-bottom:4px}
+.w3-code{border-left:4px solid #4CAF50}
+.myMenu {margin-bottom:150px}
+</style>
+
+<body>
+
+<!-- Top Menu -->
+<div class="w3-top">
+  <div class="w3-bar w3-theme w3-large" style="z-index:4;">
+    <a class="w3-bar-item w3-button w3-left w3-hide-large w3-hover-white w3-large w3-theme w3-padding-16" href="javascript:void(0)" onclick="w3_open()">☰</a>
+    <a class="w3-bar-item w3-button w3-hide-medium w3-hide-small w3-hover-white w3-padding-16" href="javascript:void(0)" onclick="w3_show_nav('menuPag')">Homepage</a>
+   <a class="w3-bar-item w3-button w3-hide-medium w3-hover-white w3-padding-16" href="javascript:void(0)" onclick="w3_show_nav('menuPro')">Profile</a>
+   <a class="w3-bar-item w3-button w3-hide-medium w3-hover-white w3-padding-16" href="javascript:void(0)" onclick="w3_show_nav('menuTow')">Hometown</a>
+   <a class="w3-bar-item w3-button w3-hide-medium w3-hover-white w3-padding-16" href="javascript:void(0)" onclick="w3_show_nav('menuFoo')">Food</a>
+   <a class="w3-bar-item w3-button w3-hide-medium w3-hover-white w3-padding-16" href="javascript:void(0)" onclick="w3_show_nav('menuTou')">Tourist</a>
+  </div>
+</div>
+
+<!-- Sidebar/Left Menu -->
+<div class="w3-sidebar w3-bar-block w3-collapse w3-animate-left" style="z-index:3;width:270px" id="mySidebar">
+  <div class="w3-bar w3-hide-large w3-large">
+    <a href="javascript:void(0)" onclick="w3_show_nav('menuPag')" class="w3-bar-item w3-button w3-theme w3-hover-white w3-padding-16" style="width:50%">Homepage</a>
+    <a href="javascript:void(0)" onclick="w3_show_nav('menuPro')" class="w3-bar-item w3-button w3-theme w3-hover-white w3-padding-16" style="width:50%">Profile<
+	<a href="javascript:void(0)" onclick="w3_show_nav('menuTow')" class="w3-bar-item w3-button w3-theme w3-hover-white w3-padding-16" style="width:50%">Hometown</a>
+    <a href="javascript:void(0)" onclick="w3_show_nav('menuFoo')" class="w3-bar-item w3-button w3-theme w3-hover-white w3-padding-16" style="width:50%">Food</a>
+	<a href="javascript:void(0)" onclick="w3_show_nav('menuTou')" class="w3-bar-item w3-button w3-theme w3-hover-white w3-padding-16" style="width:50%">Tourist</a>
+  </div>
+  
+  <!-- Content of Sidebar/Left Menu -->
+    <a href="javascript:void(0)" onclick="w3_close()" class="w3-button w3-right w3-xlarge w3-hide-large" title="Close Menu">×</a>
+  <div id="menuPag" class="myMenu">
+  <div class="w3-container">
+    <h3>Homepage</h3>
+  </div>
+  <a class="w3-bar-item w3-button" href="#profile">Profile</a>
+  <a class="w3-bar-item w3-button" href="#hometown">Hometown</a>
+  <a class="w3-bar-item w3-button" href="#food">Food</a>  
+  <a class="w3-bar-item w3-button" href="#tourist">Tourist</a>
+  </div>
+  <div id="menuPro" class="myMenu" style="display:none">
+  <div class="w3-container">
+    <h3>Profile</h3>
+  </div>
+  <a class="w3-bar-item w3-button" href="profile.html">About</a>
+  <a class="w3-bar-item w3-button" href="profile.html">Contact</a>
+  </div>
+   <div id="menuTow" class="myMenu" style="display:none">
+  <div class="w3-container">
+    <h3>Hometown</h3>
+  </div>
+  <a class="w3-bar-item w3-button" href="hometown.html">About</a>
+  <a class="w3-bar-item w3-button" href="hometown.html">Portfolio</a>
+  <a class="w3-bar-item w3-button" href="hometown.html">Contact</a>
+  </div>
+   <div id="menuFoo" class="myMenu" style="display:none">
+  <div class="w3-container">
+    <h3>Food</h3>
+  </div>
+  <a class="w3-bar-item w3-button" href="food.html">Food</a>
+  </div>
+   <div id="menuTou" class="myMenu" style="display:none">
+	  <div class="w3-container">
+		<h3>Tourist</h3>
+	  </div>
+	  <a class="w3-bar-item w3-button" href="tourist.html">Offers</a>
+	  <a class="w3-bar-item w3-button" href="tourist.html">Nature</a>
+	  <a class="w3-bar-item w3-button" href="tourist.html">Contact</a>
+  </div>
+</div>
+
+<!-- Overlay effect when opening sidebar on small screens -->
+<div class="w3-overlay w3-hide-large" onclick="w3_close()" style="cursor:pointer" title="close side menu" id="myOverlay"></div>
+
+<!-- Main content: shift it to the right by 270 pixels when the sidebar is visible -->
+<div class="w3-main w3-container" style="margin-left:270px;margin-top:117px;">
+
+<div class="w3-panel w3-padding-large w3-card-4 w3-light-grey" id="profile">
+  <h1 class="w3-jumbo">Profile</h1>
+  <p class="w3-xlarge">My Profile</p>
+  <a class="w3-button w3-theme w3-hover-white" href="profile.html">Curious?</a>
+</div>
+
+<div class="w3-panel w3-padding-large w3-card-4 w3-light-grey" id="hometown">
+  <h1 class="w3-jumbo">Hometown</h1>
+  <p class="w3-xlarge">My Hometown</p>
+  <a class="w3-button w3-theme w3-hover-white" href="hometown.html">Where is it?</a>
+</div>
+
+<div class="w3-panel w3-padding-large w3-card-4 w3-light-grey" id="food">
+  <h1 class="w3-jumbo">Food</h1>
+  <p class="w3-xlarge">My Hometown Food</p>
+  <a class="w3-button w3-theme w3-hover-white" href="food.html">Try it Yourself</a>
+</div>
+
+<div class="w3-panel w3-padding-large w3-card-4 w3-light-grey" id="tourist">
+  <h1 class="w3-jumbo">Tourist</h1>
+  <p class="w3-xlarge">My Hometown Tourism Sites</p>
+  <a class="w3-button w3-theme w3-hover-white" href="tourist.html" >Go!!!</a>
+</div>
+
+<footer class="w3-panel w3-padding-32 w3-card-4 w3-light-grey w3-center w3-opacity">
+ <a href="#profile" class="w3-button w3-black"><i class="fa fa-arrow-up w3-margin-right"></i>To the top</a>
+</footer>
+
+<!-- END MAIN -->
+
+</div>
+
+<script>
+// Script to open and close the sidebar
+function w3_open() {
+  document.getElementById("mySidebar").style.display = "block";
+  document.getElementById("myOverlay").style.display = "block";
+}
+ 
+function w3_close() {
+  document.getElementById("mySidebar").style.display = "none";
+  document.getElementById("myOverlay").style.display = "none";
+}
+
+function w3_show_nav(name) {
+  document.getElementById("menuPag").style.display = "none";
+  document.getElementById("menuPro").style.display = "none";
+  document.getElementById("menuTow").style.display = "none";
+  document.getElementById("menuFoo").style.display = "none";
+  document.getElementById("menuTou").style.display = "none";
+  document.getElementById(name).style.display = "block";
+  w3-open();
+}
+</script>
+
+
+</body>
+</html>
